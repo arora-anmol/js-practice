@@ -1,0 +1,23 @@
+<HTML>
+<HEAD></HEAD>
+<BODY>
+	<button id = 'first'>Keep Clicking </button>
+	<p> You have clicked this button <span id = 'numClicks'></span> times</p>
+	<script>
+
+		var numClicks = 0
+		function clickHandler() {
+			numClicks++
+			var numClickSpan = document.getElementById('numClicks')
+			if (numClicks == 1)
+				numClickSpan.innerHTML = 'once'
+			else
+				numClickSpan.innerHTML = numClicks +' times'
+		}
+
+		var button = document.getElementById('first')
+		button.addEventListener('click', clickHandler)
+
+	</script>
+</BODY>
+</HTML>
